@@ -37,8 +37,8 @@ chmod +x ./installer_linux
 source ~/.bash_profile
 cd cri-dockerd
 mkdir bin
-
 echo -e "IT \n WILL  \n TAKE TIME \n WAIT"
+sudo apt  install golang-go
 go build -o bin/cri-dockerd
 
 
@@ -54,6 +54,8 @@ sudo systemctl enable --now cri-docker.socket
 #Install conntrack package
 
 sudo apt-get install -y conntrack
+sudo apt-get upgrade -y
+
 
 #Install crictl package
 
@@ -66,13 +68,13 @@ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/miniku
 chmod +x minikube
 
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
 minikube version
 minikube start --network-plugin=cni --cni=calico
 
 minikube status
 
 kubectl config view
-
 
 
 
