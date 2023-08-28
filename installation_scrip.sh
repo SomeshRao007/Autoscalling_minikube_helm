@@ -37,6 +37,8 @@ chmod +x ./installer_linux
 source ~/.bash_profile
 cd cri-dockerd
 mkdir bin
+
+echo -e "IT \n WILL  \n TAKE TIME \n WAIT"
 go build -o bin/cri-dockerd
 
 
