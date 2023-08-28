@@ -35,7 +35,7 @@ rm -f crictl-$VERSION-linux-amd64.tar.gz
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 chmod +x minikube
 
-sudo install minikube-linux-amd64 /usr/local/bin/minikube
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 minikube version
 minikube start --network-plugin=cni --cni=calico
 
