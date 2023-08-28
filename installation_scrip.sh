@@ -19,12 +19,13 @@ echo \
 
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
-sudo systemctl status docker
+
+
 sudo groupadd docker
 sudo usermod -aG docker $USER && newgrp docker
 sudo systemctl enable docker
-sudo systemctl status docker
-sudo systemctl start/stop docker
+
+sudo systemctl start docker
 
 #Install cri-dockerd 
 
