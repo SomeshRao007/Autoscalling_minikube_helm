@@ -33,6 +33,9 @@ sudo chown -R prometheus:prometheus /etc/prometheus/console_libraries
 
 echo "copy the content in promethus.yml file or copy the file to /etc/prometheus/"
 
+echo "\n Change the ownership of the file to prometheus user. after moving that file \n
+
+sudo chown prometheus:prometheus /etc/prometheus/prometheus.yml "
 
 
 
